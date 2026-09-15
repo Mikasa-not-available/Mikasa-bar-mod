@@ -1,0 +1,26 @@
+{
+	"schemaVersion": 1,
+	"id": "mikasa-bars",
+	"version": "${version}",
+	"name": "Mikasa-bars",
+	"description": "Shows a health bar, HP numbers and name above the entity you are targeting. Author: Mikasa.",
+	"authors": [
+		"Mikasa"
+	],
+	"license": "MIT",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.mikasa.bars.MikasaBarsMod"
+		],
+		"client": [
+			"com.mikasa.bars.client.MikasaBarsClient"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
