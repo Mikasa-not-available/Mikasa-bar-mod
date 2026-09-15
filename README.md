@@ -7,15 +7,15 @@ Lightweight Fabric HUD by **Mikasa** for vanilla-style target health bars.
 | | |
 |---|---|
 | **Mod id** | `mikasa-bars` |
-| **Version** | `fabric-26.2-1.2` |
-| **Minecraft** | `26.2` |
+| **Version** | `fabric-26.3-1.3` |
+| **Minecraft** | `26.3` |
 | **Loader** | Fabric **0.19.5+** (**IMPORTANT**) |
 | **API** | Fabric API (required) |
 | **Java** | 25+ |
 | **License** | MIT |
 | **Side** | **Client-side** (server install optional / not required) |
 
-Jar name: `Mikasa-bars-fabric-26.2-1.2.jar`
+Jar name: `Mikasa-bars-fabric-26.3-1.3.jar`
 
 ---
 
@@ -87,9 +87,9 @@ Nothing is generated under `config/` on first launch. Install the jar and play.
 
 | Dependency | Required? |
 |------------|-----------|
-| Minecraft **26.2** | Yes |
+| Minecraft **26.3** | Yes |
 | Fabric Loader **0.19.5+** (**IMPORTANT**) | Yes — older loaders (e.g. 0.19.3) will fail to load |
-| **Fabric API** for 26.2 | Yes |
+| **Fabric API** for 26.3 | Yes |
 | Java **25+** | Yes |
 | Server-side install | **No** |
 
@@ -97,10 +97,10 @@ Nothing is generated under `config/` on first launch. Install the jar and play.
 
 ## Install (client)
 
-1. Install Fabric Loader for Minecraft **26.2** (**IMPORTANT:** use **0.19.5+**).
+1. Install Fabric Loader for Minecraft **26.3** (**IMPORTANT:** use **0.19.5+**).
 2. Put into the **client** `mods` folder:
-   - `Mikasa-bars-fabric-26.2-1.2.jar`
-   - Fabric API for 26.2
+   - `Mikasa-bars-fabric-26.3-1.3.jar`
+   - Fabric API for 26.3
 3. Launch Minecraft and look at a living entity.
 
 ### Multiplayer note
@@ -129,7 +129,7 @@ HP values come from the client’s view of the entity (`getHealth()` / `getMaxHe
 gradlew.bat build
 ```
 
-Output: `build/libs/Mikasa-bars-fabric-26.2-1.2.jar`
+Output: `build/libs/Mikasa-bars-fabric-26.3-1.3.jar`
 
 ---
 
