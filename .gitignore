@@ -29,3 +29,6 @@ desktop.ini
 *.tmp
 *.bak
 *~
+
+# Local tools
+port_bars.py
