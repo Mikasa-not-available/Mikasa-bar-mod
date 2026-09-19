@@ -2,16 +2,13 @@ package com.mikasa.bars.client;
 
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
+import net.minecraft.client.render.RenderTickCounter;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.projectile.ProjectileUtil;
 import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.MathHelper;
 
-/**
- * Draws a static top-center name + HP bar + Current/Max for the look target.
- * Author: Mikasa
- */
 public final class TargetHealthHud {
 	private static final int BAR_WIDTH = 90;
 	private static final int BAR_HEIGHT = 8;
@@ -21,7 +18,7 @@ public final class TargetHealthHud {
 	private TargetHealthHud() {
 	}
 
-	public static void render(DrawContext context, float tickDelta) {
+	public static void render(DrawContext context, RenderTickCounter tickCounter) {
 		MinecraftClient mc = MinecraftClient.getInstance();
 		if (mc.player == null || mc.world == null || mc.options.hudHidden) {
 			return;
@@ -57,13 +54,12 @@ public final class TargetHealthHud {
 	}
 
 	private static void drawCentered(DrawContext context, MinecraftClient mc,
-									String text, int centerX, int y, int color) {
+									 String text, int centerX, int y, int color) {
 		int width = mc.textRenderer.getWidth(text);
 		context.drawText(mc.textRenderer, text, centerX - width / 2, y, color, false);
 	}
 
 	private static LivingEntity findTarget(MinecraftClient mc) {
-		// Vanilla default entity interaction range = 3.0 blocks
 		double range = 3.0D * RANGE_MULTIPLIER;
 
 		HitResult hit = ProjectileUtil.getCollision(
